@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+}
+body {
+   margin: 0;
+   background-color: #eef2ff;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   color: #1e293b;
+   padding: 24px;
+}
+.quiz {
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+}
+.quiz h1 {
+    text-align: center;
+    margin-top: 0;
+    color: #4338ca;
+}
+#questionText {
+    font-size: 22px;
+    line-height: 1.5;
+}
+#answersContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+button {
+    font: inherit;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+#answersContainer button {
+    background-color: #e0e7ff;
+    text-align: left;
+}
+#answersContainer button:hover {
+    background-color: #c7d2fe;
+}
+#nextBtn {
+    background-color: #4338ca;
+    color: #ffffff;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+#nextBtn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+#restartBtn {
+    background-color: #e2e8f0;
+}
+#restartBtn:hover {
+    background-color: #cbd5e1;
+}
+#resultText {
+    font-weight: 700;
+    min-height: 24px;
+    line-height: 1.5;
+    margin: 20px 0 12px;
+}
+#nextBtn:not(:disabled):hover {
+    background-color: #3730a3;
+}
+#questionCounter {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+#answerContainer button,
+#restartBtn {
+    color: #1e293b;
+}
+button:focus-visible {
+    outline-offset: 3px;
+    outline: 3px solid #6366f1;
+}
+@media (max-width: 480px){
+    body {
+        padding: 12px;
+    }
+    .quiz {
+        margin: 20px auto;
+        padding :20px;
+    }
+}
+#nextBtn,
+#restartBtn {
+    width: 100%;
+    margin-right: 0;
+}
+#resultText.correct {
+    color: #15803d;
+}
+#resultText.incorrect {
+    color: #d45252;
+}
+#answersContainer button.correct {
+    background-color: #78c795;
+    color: #102a18;
+}
+#answersContainer button.incorrect {
+    background-color: #d87474;
+    color: #2b1010;
+}
